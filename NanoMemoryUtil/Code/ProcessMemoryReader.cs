@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using WarInTheNorthTrainer.UI;
 
-namespace WarInTheNorthTrainer.Code
+namespace NanoMemUtil.Code
 {
     public class ProcessMemoryReader
     {

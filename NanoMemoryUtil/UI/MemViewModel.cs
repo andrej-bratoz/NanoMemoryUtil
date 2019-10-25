@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
-using WarInTheNorthTrainer.Annotations;
+using NanoMemUtil.Code;
+using NanoMemUtil.Properties;
 
-namespace WarInTheNorthTrainer.UI
+namespace NanoMemUtil.UI
 {
     public class MemViewModel : INotifyPropertyChanged
     {
@@ -28,11 +24,11 @@ namespace WarInTheNorthTrainer.UI
         private MemCommand _nextScanCommand;
         private string _selectedProcess;
         private int _availableProcessesIndexselected;
-        private List<MemoryDTO> _foundValues;
+        private List<MemoryDto> _foundValues;
         private long _completedPercent;
         private string _currentAddressInfo;
         private bool _isNextScanEnabled;
-        private List<MemoryDTO> _foundValuesSnapshot;
+        private List<MemoryDto> _foundValuesSnapshot;
         private MemCommand _applyValue;
         private int _selectedIndexFoundValue;
         private string _newValue;
@@ -181,7 +177,7 @@ namespace WarInTheNorthTrainer.UI
             }
         }
 
-        public List<MemoryDTO> FoundValues
+        public List<MemoryDto> FoundValues
         {
             get => _foundValues;
             set
@@ -191,7 +187,7 @@ namespace WarInTheNorthTrainer.UI
             }
         }
 
-        public List<MemoryDTO> FoundValuesSnapshot
+        public List<MemoryDto> FoundValuesSnapshot
         {
             get => _foundValuesSnapshot;
             set

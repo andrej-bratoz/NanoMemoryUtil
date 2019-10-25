@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using WarInTheNorthTrainer.Code;
 
-namespace WarInTheNorthTrainer
+namespace NanoMemUtil.Code
 {
     public class WinAPI
     {
@@ -36,7 +31,7 @@ namespace WarInTheNorthTrainer
             out IntPtr lpNumberOfBytesRead);
 
         [DllImport("kernel32.dll", SetLastError = true)]
-        public static extern bool WriteProcessMemory(
+        public static extern int WriteProcessMemory(
             IntPtr hProcess,
             IntPtr lpBaseAddress,
             byte[] lpBuffer,
@@ -137,7 +132,7 @@ namespace WarInTheNorthTrainer
     [StructLayout(LayoutKind.Sequential)]
     public struct MEMORY_BASIC_INFORMATION
     {
-        public UIntPtr BaseAddress;
+        public IntPtr BaseAddress;
         public UIntPtr AllocationBase;
         public uint AllocationProtect;
         public UIntPtr RegionSize;

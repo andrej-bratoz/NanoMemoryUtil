@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WarInTheNorthTrainer.Code.MVVM
+namespace NanoMemUtil.Code.MVVM
 {
     public interface IView
     {

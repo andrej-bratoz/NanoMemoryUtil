@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using WarInTheNorthTrainer.UI;
+﻿using System.Windows;
+using NanoMemUtil.UI;
 
-namespace WarInTheNorthTrainer.Code.MVVM
+namespace NanoMemUtil.Code.MVVM
 {
     public class Navigator
     {
