@@ -104,16 +104,12 @@ namespace NanoMemUtil.Code
                         //
                         if(needsRemainder && regionSize % (ulong)CHUNK_SIZE != 0)
                         {
-                            chunkSize = regionSize & CHUNK_SIZE;
+                            chunkSize = regionSize % CHUNK_SIZE;
                             PerformRead(valToMatch, chunkSize, information, baseAddress, list);
                         }
                     }
                 }
             });
-
-          
-
-
             return list;
         }
 
